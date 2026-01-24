@@ -12,7 +12,7 @@ The following `tip` changes can be tested by building VictoriaTraces components 
 
 ## tip
 
-## [v0.7.1](https://github.com/VictoriaMetrics/VictoriaTraces/releases/tag/v0.7.0)
+## [v0.7.1](https://github.com/VictoriaMetrics/VictoriaTraces/releases/tag/v0.7.1)
 
 Released at 2026-01-24
 
