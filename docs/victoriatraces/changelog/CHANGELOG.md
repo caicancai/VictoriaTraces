@@ -12,6 +12,8 @@ The following `tip` changes can be tested by building VictoriaTraces components 
 
 ## tip
 
+* FEATURE: [Single-node VictoriaTraces](https://docs.victoriametrics.com/victoriatraces/) and vtstorage in [VictoriaTraces cluster](https://docs.victoriametrics.com/victoriatraces/cluster/): adjust `-insert.indexFlushInterval` from 30s to 20s to ensure a proper time gap with `-search.latencyOffset`. This is useful when ingest data is not real-time, as it helps reduce the probability that data can be searched by condition but is not present in the traceID index, resulting in failure to query by traceID.
+
 * BUGFIX: [Single-node VictoriaTraces](https://docs.victoriametrics.com/victoriatraces/) and vtselect in [VictoriaTraces cluster](https://docs.victoriametrics.com/victoriatraces/cluster/): fix backward compatibility for the old index format. Previously, the old index format was not parsed correctly into the start and end timestamps.
 
 ## [v0.7.0](https://github.com/VictoriaMetrics/VictoriaTraces/releases/tag/v0.7.0)

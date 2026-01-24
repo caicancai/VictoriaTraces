@@ -14,7 +14,7 @@ import (
 )
 
 var (
-	indexFlushInterval = flag.Duration("insert.indexFlushInterval", 30*time.Second, "Amount of time after which the index of a trace is flushed. VictoriaTraces creates an index for each trace ID based on its start and end times."+
+	indexFlushInterval = flag.Duration("insert.indexFlushInterval", 20*time.Second, "Amount of time after which the index of a trace is flushed. VictoriaTraces creates an index for each trace ID based on its start and end times."+
 		"Each trace ID must wait in the queue for -insert.indexFlushInterval, continuously updating its start and end times before being flushed into the index.")
 )
 
