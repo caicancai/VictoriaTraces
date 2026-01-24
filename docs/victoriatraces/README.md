@@ -423,7 +423,7 @@ It is recommended protecting internal HTTP endpoints from unauthorized access:
   -insert.disableCompression
     	Whether to disable compression when sending the ingested data to -storageNode nodes. Disabled compression reduces CPU usage at the cost of higher network usage
   -insert.indexFlushInterval duration
-    	Amount of time after which the index of a trace is flushed. VictoriaTraces creates an index for each trace ID based on its start and end times.Each trace ID must wait in the queue for -insert.indexFlushInterval, continuously updating its start and end times before being flushed into the index. (default 30s)
+    	Amount of time after which the index of a trace is flushed. VictoriaTraces creates an index for each trace ID based on its start and end times.Each trace ID must wait in the queue for -insert.indexFlushInterval, continuously updating its start and end times before being flushed into the index. (default 20s)
   -insert.maxFieldsPerLine int
     	The maximum number of log fields per line, which can be read by /insert/* handlers; see https://docs.victoriametrics.com/victorialogs/faq/#how-many-fields-a-single-log-entry-may-contain (default 1000)
   -insert.maxQueueDuration duration
